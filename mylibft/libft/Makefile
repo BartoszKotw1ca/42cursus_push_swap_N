@@ -55,10 +55,10 @@ bonus: all $(BONUSOBJ)
 	ar rcs $(NAME) $(BONUSOBJ)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
-	cc $(FLAG) -c $< -o $@
+	@cc $(FLAG) -c $< -o $@
 
 clean:
 	rm -f $(OBJ) $(BONUSOBJ)

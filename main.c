@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 08:29:25 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/04 20:00:00 by bkotwica         ###   ########.fr       */
+/*   Created: 2024/04/04 19:44:37 by bkotwica          #+#    #+#             */
+/*   Updated: 2024/04/04 19:52:06 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_Node	**create_list(char **list)
+int	main(int argc, char **argv)
 {
-	int	i;
+	(void) argc;
+	char	**list;
 
-	i = 0;
-	while (list[i])
-	{
-		
-	}
+	if (argc == 2)
+		list = ft_split(argv[1], ' ');
+	if (argc > 2)
+		list = argv + 1;
+	if (!check_all(list))
+		exit(0);
+	ft_printf("tak, przeszlo test"); // i have to comment it
 }

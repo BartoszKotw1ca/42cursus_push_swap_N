@@ -20,7 +20,7 @@ $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 %.o: %.c
-	cc $(FLAGS) -c $< -o $@
+	@cc $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
