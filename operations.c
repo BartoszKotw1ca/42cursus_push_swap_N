@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 08:29:25 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/05 11:42:21 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/05 19:44:55 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_Node	*create_node_list(char **list)
 	t_Node	*new_node;
 
 	head = NULL;
+	current = NULL;
 	i = 0;
 	while (list[i])
 	{
