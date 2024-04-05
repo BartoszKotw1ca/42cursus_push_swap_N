@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 15:59:57 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/04 19:45:09 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/05 11:54:45 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,14 @@ int	check_if_more_less_int(char **list)
 // bcs the subject does not specife it
 int	check_all(char **list)
 {
-	if (check_if_correct_data_in_ft_split(list)
+	int	count;
+
+	count = 0;
+	while (list[count])
+		count ++;
+	if (count <= 1)
+		return (0);
+	else if (check_if_correct_data_in_ft_split(list)
 		&& check_if_every_digit_is_only_one(list)
 		&& check_if_more_less_int(list))
 		return (1);

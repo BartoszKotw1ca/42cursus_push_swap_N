@@ -2,7 +2,7 @@ FLAGS = -Wall -Wextra -Werror
 LIB = ./mylibft/mylibft.a
 NAME = push_swap
 
-SRC = main_function.c correct_data.c ft_atoilong.c main.c
+SRC = main_function.c correct_data.c ft_atoilong.c main.c operations.c
 
 OBJ := $(SRC:%.c=%.o)
 
