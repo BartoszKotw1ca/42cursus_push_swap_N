@@ -6,12 +6,13 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:05:44 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/05 17:06:46 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 09:14:21 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// there it will be max 2 steps
 int	for_three_numbers(t_Node **node)
 {
 	int	i;

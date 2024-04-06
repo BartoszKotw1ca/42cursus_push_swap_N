@@ -4,8 +4,9 @@ NAME = push_swap
 
 SRC = main_function.c correct_data.c \
 	ft_atoilong.c main.c operations.c \
-	algoritm.c for_three_num.c utils.c \
-	for_five_num.c utils_2.c 
+	for_two_num.c for_three_num.c utils.c \
+	for_five_num.c utils_2.c for_four_numbers.c \
+	algorithm.c 
 
 OBJ := $(SRC:%.c=%.o)
 

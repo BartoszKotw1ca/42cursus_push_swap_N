@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   for_five_num.c                                     :+:      :+:    :+:   */
+/*   algorith.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 17:21:34 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:32:49 by bkotwica         ###   ########.fr       */
+/*   Created: 2024/04/06 09:18:53 by bkotwica          #+#    #+#             */
+/*   Updated: 2024/04/06 09:21:16 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	for_five_numbers(t_Node **node, int counter_el)
+int	algorithm(t_Node **node, int counter_el)
 {
-	int		i;
 	int		min;
+	int		i;
 	int		j;
 	t_Node	*listb;
-
 	listb = NULL;
-	min = min_in_list(node);
+
 	i = 0;
-	while (listb == NULL)
+	while (!check_if_sorted(node) || listb != NULL)
 	{
-		if ((counter_el / 2) < (current_pos(node, min)))
+		min = min_in_list(node);
+		if (*node == NULL)
+		{
+			while (listb)
+			{
+				p(&listb, node);
+				ft_printf("pa\n");
+				i ++;
+			}
+			break;
+		}
+		else if ((counter_el / 2) < (current_pos(node, min)))
 		{
 			j = counter_el - (current_pos(node, min));
+			//printf("valu :%d\n", (*node)->value);
 			while (j-- > 0)
 			{
 				ft_printf("rra\n");
@@ -47,11 +58,9 @@ int	for_five_numbers(t_Node **node, int counter_el)
 		counter_el --;
 		p(node, &listb);
 		ft_printf("pb\n");
+		//printf("conter el: %d\n", counter_el);
+	//	printing_nodes(listb);
 		i ++;
 	}
-	i += for_four_numbers(node, 4);
-	p(&listb, node);
-	ft_printf("pa\n");
-	i ++;
 	return (i);
 }

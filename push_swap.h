@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 08:30:59 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/05 19:46:19 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 09:21:38 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int			for_two_numbers(t_Node **node);
 int			check_if_sorted(t_Node **node);
 int			for_two_numbers(t_Node **node);
 int			for_three_numbers(t_Node **node);
-int			for_four_numbers(t_Node **node);
 int			max_in_list(t_Node **node);
 int			check_if_sorted_back(t_Node **node);
 int			count_words_split(char const *s, char c);
@@ -43,4 +42,9 @@ int			check_if_sorted(t_Node **node);
 int			min_in_list(t_Node **node);
 int			for_five_numbers(t_Node **node, int counter_el);
 void		printing_nodes(t_Node *node);
+int			check_if_sorted_b(t_Node **node);
+int			for_four_numbers(t_Node **node, int	counter_el);
+int			current_pos(t_Node **node, int arg);
+int			algorithm(t_Node **node, int counter_el);
+
 #endif

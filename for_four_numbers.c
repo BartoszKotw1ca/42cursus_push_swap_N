@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   for_five_num.c                                     :+:      :+:    :+:   */
+/*   for_four_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 17:21:34 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:32:49 by bkotwica         ###   ########.fr       */
+/*   Created: 2024/04/06 08:56:43 by bkotwica          #+#    #+#             */
+/*   Updated: 2024/04/06 09:33:06 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	for_five_numbers(t_Node **node, int counter_el)
+// there itwill be max 6 steps
+// max 3 for search and push min to b
+// max 2 to sort numbers in a
+// 1 for push min to a
+int	for_four_numbers(t_Node **node, int	counter_el)
 {
 	int		i;
 	int		min;
@@ -49,7 +53,7 @@ int	for_five_numbers(t_Node **node, int counter_el)
 		ft_printf("pb\n");
 		i ++;
 	}
-	i += for_four_numbers(node, 4);
+	i += for_three_numbers(node);
 	p(&listb, node);
 	ft_printf("pa\n");
 	i ++;
