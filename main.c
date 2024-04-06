@@ -6,20 +6,11 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 19:44:37 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:36:42 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 12:09:09 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	printing_nodes(t_Node *node)
-{
-	while(node)
-	{
-		printf("%d\n", node->value);
-		node = node->next;
-	}
-}
 
 int	main(int argc, char **argv)
 {
@@ -31,7 +22,7 @@ int	main(int argc, char **argv)
 	counter_words = 0;
 	counter_steps = 0;
 	if (argc == 1)
-		return (0);
+		exit (0);
 	if (argc == 2)
 	{
 		counter_words = count_words_split(argv[1], ' ');
@@ -44,10 +35,9 @@ int	main(int argc, char **argv)
 	}
 	if (!check_all(list))
 	{
-		ft_printf("Error\n");
+		write(2, "Error\n", 6);
 		exit(0);
 	}
-	//ft_printf("Correct data!\n");
 	lista = create_node_list(list);
 	if (counter_words == 2)
 		counter_steps += for_two_numbers(&lista);
@@ -59,7 +49,6 @@ int	main(int argc, char **argv)
 		counter_steps += for_five_numbers(&lista, counter_words);
 	else
 		counter_steps += algorithm(&lista, counter_words);
-	//printing_nodes(lista);
-	//ft_printf("------\nSteps: %d\n------", counter_steps);
+	del(&lista);
 	return (counter_steps);
 }

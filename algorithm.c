@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorith.c                                         :+:      :+:    :+:   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 09:18:53 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:21:16 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:30:10 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	algorithm(t_Node **node, int counter_el)
 	int		i;
 	int		j;
 	t_Node	*listb;
-	listb = NULL;
 
+	listb = NULL;
 	i = 0;
 	while (!check_if_sorted(node) || listb != NULL)
 	{
@@ -32,12 +32,11 @@ int	algorithm(t_Node **node, int counter_el)
 				ft_printf("pa\n");
 				i ++;
 			}
-			break;
+			break ;
 		}
 		else if ((counter_el / 2) < (current_pos(node, min)))
 		{
 			j = counter_el - (current_pos(node, min));
-			//printf("valu :%d\n", (*node)->value);
 			while (j-- > 0)
 			{
 				ft_printf("rra\n");
@@ -58,8 +57,6 @@ int	algorithm(t_Node **node, int counter_el)
 		counter_el --;
 		p(node, &listb);
 		ft_printf("pb\n");
-		//printf("conter el: %d\n", counter_el);
-	//	printing_nodes(listb);
 		i ++;
 	}
 	return (i);

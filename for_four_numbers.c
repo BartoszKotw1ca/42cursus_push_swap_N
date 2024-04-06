@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 08:56:43 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:33:06 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:34:51 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // max 3 for search and push min to b
 // max 2 to sort numbers in a
 // 1 for push min to a
-int	for_four_numbers(t_Node **node, int	counter_el)
+int	for_four_numbers(t_Node **node, int counter_el)
 {
 	int		i;
 	int		min;
@@ -57,5 +57,6 @@ int	for_four_numbers(t_Node **node, int	counter_el)
 	p(&listb, node);
 	ft_printf("pa\n");
 	i ++;
+	free(listb);
 	return (i);
 }

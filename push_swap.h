@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 08:30:59 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:21:38 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:58:58 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,10 @@ int			min_in_list(t_Node **node);
 int			for_five_numbers(t_Node **node, int counter_el);
 void		printing_nodes(t_Node *node);
 int			check_if_sorted_b(t_Node **node);
-int			for_four_numbers(t_Node **node, int	counter_el);
+int			for_four_numbers(t_Node **node, int counter_el);
 int			current_pos(t_Node **node, int arg);
 int			algorithm(t_Node **node, int counter_el);
+void		printing_nodes(t_Node *node);
+void		del(t_Node **node);
 
 #endif

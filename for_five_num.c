@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:21:34 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 09:32:49 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:35:12 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ int	for_five_numbers(t_Node **node, int counter_el)
 	p(&listb, node);
 	ft_printf("pa\n");
 	i ++;
+	free(listb);
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 08:29:25 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/05 19:44:55 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:29:13 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,13 +99,14 @@ void	rr(t_Node **node)
 
 	if (*node == NULL || (*node)->next == NULL)
 		return ;
-	first = (*node);
+	first = *node;
 	while ((*node)->next)
-		(*node) = (*node)->next;
-	last = (*node);
-	(*node) = (*node)->previous;
-	(*node)->next = NULL;
+		*node = (*node)->next;
+	last = *node;
+	if (last->previous)
+		last->previous->next = NULL;
 	last->previous = NULL;
 	last->next = first;
+	first->previous = last;
 	*node = last;
 }
