@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:23:19 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 12:09:50 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 19:12:33 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,19 @@ void	printing_nodes(t_Node *node)
 		printf("%d\n", node->value);
 		node = node->next;
 	}
+}
+
+int	num_in_ll(t_Node **node)
+{
+	int		i;
+	t_Node	*tmp;
+
+	i = 0;
+	tmp = *node;
+	while (tmp->next)
+	{
+		tmp = tmp->next;
+		i ++;
+	}
+	return (i);
 }

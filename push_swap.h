@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 08:30:59 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 11:58:58 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 19:42:27 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,11 @@ int			current_pos(t_Node **node, int arg);
 int			algorithm(t_Node **node, int counter_el);
 void		printing_nodes(t_Node *node);
 void		del(t_Node **node);
+int			num_in_ll(t_Node **node);
+int			push_first_two(t_Node **node, t_Node **listb);
+int			myabs(int nr);
+int			check(int a, int b);
+int			search_for_lower_value(t_Node *node, t_Node **listb);
+int			search_for_maks_value(t_Node *node, t_Node **listb);
 
 #endif

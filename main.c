@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 19:44:37 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 12:09:09 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/06 19:31:00 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int	main(int argc, char **argv)
 		counter_steps += for_five_numbers(&lista, counter_words);
 	else
 		counter_steps += algorithm(&lista, counter_words);
+	//printing_nodes(lista);
 	del(&lista);
+	printf("----\n%d\n----", counter_steps);
 	return (counter_steps);
 }
