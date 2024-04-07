@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 08:30:59 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/06 19:42:27 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/07 10:19:00 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void		rr(t_Node **node);
 int			for_two_numbers(t_Node **node);
 int			check_if_sorted(t_Node **node);
 int			for_two_numbers(t_Node **node);
-int			for_three_numbers(t_Node **node);
+int			for_three_numbers(t_Node **node, int i, int max);
 int			max_in_list(t_Node **node);
 int			check_if_sorted_back(t_Node **node);
 int			count_words_split(char const *s, char c);
@@ -54,5 +54,7 @@ int			myabs(int nr);
 int			check(int a, int b);
 int			search_for_lower_value(t_Node *node, t_Node **listb);
 int			search_for_maks_value(t_Node *node, t_Node **listb);
-
+int			push_cost_b(t_Node **lista, t_Node **listb, int c1);
+int			push_cost_a(t_Node **lista, t_Node *node, int c2);
+t_Node		*node_to_push(t_Node **lista, t_Node **listb);
 #endif
