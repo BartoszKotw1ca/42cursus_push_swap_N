@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:23:19 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/07 09:52:05 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/08 12:13:32 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	current_pos(t_Node **node, int arg)
 
 void	del(t_Node **node)
 {
-	if ((*node == NULL))
+	if (*node == NULL)
 		return ;
 	while ((*node)->next)
 	{
