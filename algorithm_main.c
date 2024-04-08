@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 09:18:53 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/07 12:46:09 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:40:52 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int	push_nodes_to_b(t_Node **node, t_Node **listb, int i, int el_a)
 
 	while (el_a -- >= 3)
 	{
+		//printf("listab: \n");
+		//printing_nodes(*listb);
+		//printf("lista: \n");
+		//printing_nodes(*node);
 		tmp = node_to_push(node, listb);
 		el_to_ins_a = push_cost_a(node, tmp, el_a);
 		i += el_to_ins_a + 1;
