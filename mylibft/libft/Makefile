@@ -36,8 +36,7 @@ SRC = ft_atoi.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_split.c \
-	
-BONUS = ft_lstadd_back.c \
+	ft_lstadd_back.c \
 	ft_lstadd_front.c \
 	ft_lstdelone.c \
 	ft_lstclear.c \
@@ -48,11 +47,7 @@ BONUS = ft_lstadd_back.c \
 	ft_lstsize.c \
 
 OBJ = $(SRC:.c=.o)
-BONUSOBJ = $(BONUS:.c=.o)
 all: $(NAME)
-
-bonus: all $(BONUSOBJ)
-	ar rcs $(NAME) $(BONUSOBJ)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
@@ -61,10 +56,10 @@ $(NAME): $(OBJ)
 	@cc $(FLAG) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(BONUSOBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

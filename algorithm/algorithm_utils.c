@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // its only pushes two first node from lista to listb
 void	push_first_two(t_Node **node, t_Node **listb)

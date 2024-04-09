@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // that 2 functions calculate the cost to push
 // how many times we have to rra or ra stacks to put

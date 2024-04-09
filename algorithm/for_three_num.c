@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // there it will be max 2 steps
 void	for_three_numbers(t_Node **node, int max)

@@ -1,32 +1,48 @@
 FLAGS = -Wall -Wextra -Werror
 LIB = ./mylibft/mylibft.a
 NAME = push_swap
+OBJDIR = Obj/
 
-SRC = main_function.c correct_data.c \
-	ft_atoilong.c main.c operations.c \
-	for_two_num.c for_three_num.c utils.c \
-	utils_2.c for_four_numbers.c \
-	algorithm_main.c algorithm_utils.c algorithm_utils1.c
+SRC =	utilis/correct_data.c \
+	utilis/ft_atoilong.c \
+	utilis/operations.c \
+	utilis/utils.c \
+	utilis/utils_2.c \
+	algorithm/for_two_num.c \
+	algorithm/for_three_num.c \
+	algorithm/for_four_numbers.c \
+	algorithm/algorithm_utils.c \
+	algorithm/algorithm_utils1.c \
+	algorithm/algorithm_main.c \
+	main.c
 
-OBJ := $(SRC:%.c=%.o)
+OBJ := $(SRC:%.c=$(OBJDIR)%.o)
 
 all: $(NAME)
+	@echo "Compilation completed."
 
 $(NAME): mylibft/mylibft.a $(OBJ)
-	cc $(FLAGS) $^ -o $@ $(LIB)
+	@cc $(FLAGS) $^ -o $@ $(LIB)
+
+$(OBJDIR)%.o: %.c
+	@mkdir -p $(@D)
+	@cc $(FLAGS) -c $< -o $@
 
 %.o: %.c
-	cc $(FLAGS) -c $< -o $@
+	@cc $(FLAGS) -c $< -o $@
 
 mylibft/mylibft.a:
-	make -C mylibft
+	@make -s -C mylibft
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -f $(NAME)
-	make -C mylibft fclean
+	@rm -f $(NAME)
+	@make -s -C mylibft fclean
+	@rm -rf $(OBJDIR)
+	@echo "Cleared."
 
 re: fclean all
 
