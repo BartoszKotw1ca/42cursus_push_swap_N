@@ -6,19 +6,18 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 19:40:21 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/08 14:53:45 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/09 10:53:20 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // its only pushes two first node from lista to listb
-int	push_first_two(t_Node **node, t_Node **listb)
+void	push_first_two(t_Node **node, t_Node **listb)
 {
 	p(node, listb);
 	p(node, listb);
 	ft_printf("pb\npb\n");
-	return (2);
 }
 
 // its helper function, just abs on number
@@ -57,10 +56,7 @@ int	search_for_lower_value(t_Node *node, t_Node **listb)
 		if ((tmp_b->value < tmp_a->value)
 			&& (diff > check(tmp_a->value, tmp_b->value)))
 		{
-			//printf("wartosci w lowerfun: %d\n", tmp_b->value);
-			//printf("diff %lld\n", diff);
 			diff = check(tmp_b->value, tmp_a->value);
-			//printf("diff %lld\n", diff);
 			to_retu = tmp_b->value;
 		}
 		tmp_b = tmp_b->next;

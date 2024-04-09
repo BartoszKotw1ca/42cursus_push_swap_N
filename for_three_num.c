@@ -6,14 +6,14 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:05:44 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/07 10:20:09 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/09 09:24:14 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // there it will be max 2 steps
-int	for_three_numbers(t_Node **node, int i, int max)
+void	for_three_numbers(t_Node **node, int max)
 {
 	while (!check_if_sorted(node))
 	{
@@ -22,7 +22,6 @@ int	for_three_numbers(t_Node **node, int i, int max)
 			s(node);
 			rr(node);
 			ft_printf("sa\nrra\n");
-			i += 1;
 		}
 		else if (max == (*node)->value)
 		{
@@ -36,7 +35,5 @@ int	for_three_numbers(t_Node **node, int i, int max)
 		}
 		else if ((*node)->value > (*node)->next->value)
 			for_two_numbers(node);
-		i ++;
 	}
-	return (i);
 }

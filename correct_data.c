@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 15:59:57 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/05 11:54:45 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:01:25 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int	check_if_every_digit_is_only_one(char **list)
 	return (1);
 }
 
+// its checking if the number is out 
+// of int
 int	check_if_more_less_int(char **list)
 {
 	int	i;

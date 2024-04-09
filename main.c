@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 19:44:37 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/08 14:50:29 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:10:18 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,11 @@ void	process_list(t_Node **lista, int counter_words)
 	if (counter_words == 2)
 		for_two_numbers(lista);
 	else if (counter_words == 3)
-		for_three_numbers(lista, 0, max_in_list(lista));
+		for_three_numbers(lista, max_in_list(lista));
 	else if (counter_words == 4)
 		for_four_numbers(lista, counter_words);
 	else if (counter_words >= 5)
 		algorithm(lista, counter_words);
-	//printing_nodes(*lista);
-	//printf("myasb%lld ", check(1457189065, -2107009500));
-	//printf("myasdf%lld\n", myabs(myabs(-2107009500) + myabs(1457189065)));
-	printing_nodes(*lista);
 	del(lista);
 }
 
