@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:23:19 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/08 12:13:32 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/09 14:33:09 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,6 @@ int	min_in_list(t_Node **node)
 		tmp = tmp->next;
 	}
 	return (min);
-}
-
-int	check_if_sorted_b(t_Node **node)
-{
-	t_Node	*temp;
-
-	if (*node == NULL)
-		return (1);
-	temp = *node;
-	while (temp->next)
-	{
-		if (temp->value > temp->next->value)
-			return (0);
-		temp = temp->next;
-	}
-	return (1);
 }
 
 int	current_pos(t_Node **node, int arg)

@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 15:59:57 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/09 11:01:25 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/09 14:28:11 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int	check_all(char **list)
 	count = 0;
 	while (list[count])
 		count ++;
-	if (count <= 1)
+	if (count < 1)
 		return (0);
 	else if (check_if_correct_data_in_ft_split(list)
 		&& check_if_every_digit_is_only_one(list)
