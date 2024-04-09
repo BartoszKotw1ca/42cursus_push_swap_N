@@ -26,6 +26,8 @@ void	parse_arg(int argc, char **argv, char ***list, int *counter_words)
 		*counter_words = count_words(argv + 1);
 		*list = argv + 1;
 	}
+	if (*counter_words == 1)
+		exit(1);
 	if (!check_all(*list))
 	{
 		write(2, "Error\n", 6);
@@ -35,8 +37,6 @@ void	parse_arg(int argc, char **argv, char ***list, int *counter_words)
 
 void	process_list(t_Node **lista, int counter_words)
 {
-	if (counter_words == 1)
-		exit(1);
 	else if (counter_words == 2)
 		for_two_numbers(lista);
 	else if (counter_words == 3)
