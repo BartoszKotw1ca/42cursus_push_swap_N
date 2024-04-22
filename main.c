@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 19:44:37 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/09 14:33:37 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:29:38 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	parse_arg(int argc, char **argv, char ***list, int *counter_words)
 
 void	process_list(t_Node **lista, int counter_words)
 {
-	else if (counter_words == 2)
+	if (counter_words == 2)
 		for_two_numbers(lista);
 	else if (counter_words == 3)
 		for_three_numbers(lista, max_in_list(lista));
