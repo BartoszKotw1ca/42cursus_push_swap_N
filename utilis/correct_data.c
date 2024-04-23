@@ -6,7 +6,7 @@
 /*   By: bkotwica <bkotwica@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 15:59:57 by bkotwica          #+#    #+#             */
-/*   Updated: 2024/04/09 14:28:11 by bkotwica         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:47:31 by bkotwica         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	check_in_char_in_ft_split(char **list, int i, int j, int licznik)
 {
 	while ((list[i][j] <= '9' && list[i][j] >= '0' && list[i][j])
 		|| (list[i][0] == '-' && list[i][j])
-		|| (list[i][j] == '+' && list[i][j]))
+		|| (list[i][0] == '+' && list[i][j]))
 	{
 		if ((list[i][j] == '-' && list[i][j])
 		|| (list[i][j] == '+' && list[i][j]))
